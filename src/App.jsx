@@ -1,12 +1,17 @@
+import React from "react";
+import { Fetch } from "./utils/fetch";
 
 
 export function App() {
+  const data = Fetch()
 
   return (
-    <>
-      <h1>ola mundo</h1>
-    </>
+    <div>
+        {
+          data.map((item) => {
+            return <img src={item.url} alt="" />
+          })
+        }
+    </div>
   );
 }
-
-
