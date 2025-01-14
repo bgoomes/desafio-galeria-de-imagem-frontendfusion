@@ -1,6 +1,6 @@
 export function Header(){
     return (
-        <header className="w-full h-20 shadow fixed bg-white">
+        <header className="w-full h-20 shadow fixed bg-white z-10">
             <nav className="flex items-center justify-center p-7">
                 <ul className="flex gap-9 items-center justify-center">
                     <a href="/" className="hover:text-slate-600"><li className="text-xl">Home</li></a>

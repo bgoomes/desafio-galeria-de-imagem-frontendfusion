@@ -10,7 +10,7 @@ export function AppRoutes(){
         <Routes>
             <Route path='/' element={<App />}>
                 <Route path='/' element={<Galery />}/>
-                <Route path='/favoritos' element={<Favoritos />} />
+                <Route path='/favoritos' element={<Favoritos  />} />
             </Route>
         </Routes>
     )
