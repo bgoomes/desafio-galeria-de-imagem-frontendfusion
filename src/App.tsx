@@ -1,12 +1,10 @@
-import { Galery } from "./Components/Galery";
-import { Header } from "./Components/Header";
+import { Layout } from "./Components/Layout";
 
 export function App() {
  
   return (
     <>
-      <Header />
-      <Galery />
+      <Layout />
     </>
   )
 }
