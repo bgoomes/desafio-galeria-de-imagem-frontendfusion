@@ -1,8 +1,6 @@
-import axios from "axios"
 import { useState, useEffect } from "react"
 import { Foto } from "../ui/fotos"
-
-const url = "https://picsum.photos/v2/list"
+import api from "../../api"
 
 type imgProps ={
     id: number
@@ -15,18 +13,10 @@ type imgProps ={
 export function Galery(){
     const [img, setImg] = useState<imgProps[]>([])
     
-    async function getImg(){
-        try {
-            const response = await axios.get(url)
-            const data = response.data
-            setImg(data)
-        } catch (error) {
-            console.log(error)
-        }
-    }
-
     useEffect(() => {
-        getImg()
+        api.get('').then(({data}) => {
+            setImg(data)
+        }).catch((erro) => {console.log(erro)})
     }, [])
 
     return (
