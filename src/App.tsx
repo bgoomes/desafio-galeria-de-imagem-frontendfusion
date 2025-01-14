@@ -1,9 +1,12 @@
+import { Galery } from "./Components/Galery";
+import { Header } from "./Components/Header";
 
 export function App() {
  
   return (
     <>
-      <h1>Hello world!</h1>
+      <Header />
+      <Galery />
     </>
   )
 }
