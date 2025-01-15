@@ -11,12 +11,12 @@ type fotoProps ={
 
 export function Foto({ url, author, onClick}: fotoProps){
     return (
-        <div className="w-[400px] h-[300px] overflow-hidden">
-            <div className="absolute">
-                <img src={url} alt="img" className="w-[400px] h-[300px] object-contain rounded-xl"/>
+        <div className="w-[400px] h-[300px]">
+            <div className="absolute overflow-hidden w-[400px] rounded-xl">
+                <img src={url} alt={author}/>
             </div>
-            <div className="relative flex justify-between p-8 text-orange-400">
-                <button onClick={onClick}><Heart className='hover:scale-105'/></button>
+            <div className="relative flex justify-between p-8 text-orange-400 ">
+                <button onClick={onClick} className='bg-white/80 p-2 rounded-xl'><Heart className='hover:scale-105'/></button>
             </div>
         </div>
     )
