@@ -40,6 +40,8 @@ export function FavProvider({children}: iProps){
         if (imageToAdd && !favorite.some(fav => fav.id === id)) {
             setFavorite((prevFavorites) => [...prevFavorites, imageToAdd]);
             localStorage.setItem("@Favoritos", JSON.stringify([...favorite, imageToAdd]));
+        }else {
+            alert('imagem já salva!')
         }
     }
     return (
